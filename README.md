@@ -1,5 +1,7 @@
 
-<h1 style="font-size: 100px; text-align: center;">☃️</h1>
+<div style="display: flex; justify-content: center;">
+	<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/snowman_2603.png">
+</div>
 
 ### Simple go web app
 
