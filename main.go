@@ -2,7 +2,9 @@
 package main
 
 // Libs import
-import ("net/http")
+import (
+	"log"
+	"net/http")
 
 
 func index_handler(w http.ResponseWriter, r *http.Request){
@@ -13,14 +15,17 @@ func index_handler(w http.ResponseWriter, r *http.Request){
 }
 
 
-
 func main() {
+	
+	var	PORT string = ":8080" // Change to desired port 
 
 	// Route
 	http.HandleFunc("/", index_handler)
 
+	log.Println("Server Started.")
+	log.Println("[+] Visit http://localhost"+PORT)
 
 	// Start the server on port 8080
-	http.ListenAndServe(":8080", nil)
+	log.Fatal(http.ListenAndServe(PORT, nil))
 
 }
